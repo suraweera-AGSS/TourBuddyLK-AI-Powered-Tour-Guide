@@ -1,2 +1,12 @@
-# TourMithuru-AI-Powered-Tour-Guide
-TourMithuru is a smart aI-Powered Tour Guide to Explore Sri Lanka | Built with the MEAN stack, featuring Sinhala &amp; English chatbot support, itinerary planning, and destination management.
+# TourMithuru-Smart AI-Powered Tour Guide to Explore Sri Lanka
+
+**TourMithuru** is a smart, AI-powered tourism web application designed to help travelers explore Sri Lanka more easily and interactively. Built using the MEAN stack (MongoDB, Express.js, Angular, Node.js), it supports both Sinhala and English languages.
+
+## 🌟 Key Features
+
+- 🧠 AI-powered itinerary planner
+- 💬 Sinhala & English chatbot integration (SnatchBot)
+- 📍 Destination recommendation system
+- 🏖️ Manage destinations, hotels, and tour packages
+- 🔐 Role-Based Access Control (Admin, Agent, Tourist)
+- 📊 Admin panel to manage content and users
