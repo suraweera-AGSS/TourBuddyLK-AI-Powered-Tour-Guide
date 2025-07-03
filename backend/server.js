@@ -3,8 +3,8 @@ import connectDB from './config/db.js';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import destinationRoutes from './routes/destinationRoutes.js';
-import hotelRoutes from './routes/hotels.mjs';
-import packageRoutes from './routes/packages.mjs';
+import hotelRoutes from './routes/hotels.js';
+import packageRoutes from './routes/packages.js';
 
 // Load environment variables from .env file
 dotenv.config();
