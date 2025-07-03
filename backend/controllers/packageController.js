@@ -1,4 +1,4 @@
-import Package from '../models/Package.mjs';
+import Package from '../models/Package.js';
 
 export const getAllPackages = async (req, res) => {
     try {
