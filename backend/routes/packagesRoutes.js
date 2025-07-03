@@ -4,7 +4,7 @@ import {
     createPackage,
     updatePackage,
     deletePackage
-} from '../controllers/packageController.mjs';
+} from '../controllers/packageController.js';
 
 const router = express.Router();
 
