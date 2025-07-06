@@ -1,12 +1,32 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-const PackageSchema = new mongoose.Schema({
-  name: String,
-  price: Number,
-  duration: String,
-  destinations: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Destination' }],
-  transport: String,
-  accommodation: String
+const packageSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true,
+    },
+    price: {
+        type: Number,
+        required: true,
+    },
+    duration: {
+        type: String,
+        required: true,
+    },
+    destinations: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Destination',
+        required: true,
+    }],
+    transport: {
+        type: String,
+    },
+    accommodation: {
+        type: String,
+    },
+}, {
+    timestamps: true,
 });
 
-module.exports = mongoose.model('Package', PackageSchema);
+const Package = mongoose.model('Package', packageSchema);
+export default Package;
