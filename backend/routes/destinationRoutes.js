@@ -1,17 +1,17 @@
 import express from 'express';
 import {
-    createDestination,
-    getAllDestinations,
+    getDestinations,
     getDestinationById,
+    createDestination,
     updateDestination,
-    deleteDestination,
+    deleteDestination
 } from '../controllers/destinationController.js';
 
 const router = express.Router();
 
-router.post('/', createDestination);
-router.get('/', getAllDestinations);
+router.get('/', getDestinations);
 router.get('/:id', getDestinationById);
+router.post('/', createDestination);
 router.put('/:id', updateDestination);
 router.delete('/:id', deleteDestination);
 
