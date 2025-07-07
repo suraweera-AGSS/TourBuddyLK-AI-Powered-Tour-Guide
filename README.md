@@ -1,6 +1,6 @@
-# TourMithuru-Smart AI-Powered Tour Guide to Explore Sri Lanka
+# TourBuddyLK-Smart AI-Powered Tour Guide to Explore Sri Lanka
 
-**TourMithuru** is a smart, AI-powered tourism web application designed to help travelers explore Sri Lanka more easily and interactively. Built using the MEAN stack (MongoDB, Express.js, Angular, Node.js), it supports both Sinhala and English languages.
+**TourBuddyLK** is a smart, AI-powered tourism web application designed to help travelers explore Sri Lanka more easily and interactively. Built using the MERN stack (MongoDB, Express.js, React.js, Node.js), it supports both Sinhala and English languages.
 
 ## 🌟 Key Features
 
