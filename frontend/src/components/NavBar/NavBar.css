@@ -1,0 +1,37 @@
+/* NavBar.css */
+
+.navbar {
+  background: linear-gradient(90deg, #1f2937, #111827); /* dark gradient */
+  color: #fff;
+  padding: 0.75rem 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar a {
+  color: #f9fafb; /* near white */
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #facc15; /* yellow-300 */
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.navbar a.active {
+  color: #facc15;
+  border-bottom: 2px solid #facc15;
+}

@@ -1,0 +1,134 @@
+.package-page {
+  padding: 1.5rem;
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.package-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+}
+
+.no-packages {
+  text-align: center;
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.package-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.package-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.package-image {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.package-content {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.package-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.package-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.package-duration {
+  background-color: #374151;
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.package-price {
+  background-color: #facc15;
+  color: black;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.package-description {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 0.75rem;
+}
+
+.package-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.package-button {
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border: none;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.package-button.find {
+  background-color: #4b5563;
+}
+
+.package-button.find:hover {
+  background-color: #374151;
+}
+
+.package-button.inquire {
+  background-color: #3b82f6;
+}
+
+.package-button.inquire:hover {
+  background-color: #1d4ed8;
+}
+
+.package-button.delete {
+  margin-left: auto;
+  background-color: #ef4444;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+}
+
+.package-button.delete:hover {
+  background-color: #dc2626;
+}
