@@ -28,6 +28,18 @@ export default function DestinationList() {
         <div className="destination-grid">
           {destinations.map(dest => (
             <div key={dest._id} className="destination-card">
+              
+              {/* Image */}
+              <img
+                src={
+                  dest.imageUrl ||
+                  'https://via.placeholder.com/300x200?text=No+Image'
+                }
+                alt={dest.name}
+                className="destination-image"
+              />
+
+              {/* Content */}
               <h3 className="destination-name">{dest.name}</h3>
               <p className="destination-description">{dest.description}</p>
               <p className="destination-location">
