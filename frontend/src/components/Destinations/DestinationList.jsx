@@ -1,39 +1,48 @@
 import React, { useEffect, useState } from 'react';
-import { getDestinations, deleteDestination } from '../../api/destinationApi';
+import { getDestinations } from '../../api/destinationApi';
+import './DestinationList.css';
 
 export default function DestinationList() {
   const [destinations, setDestinations] = useState([]);
 
   useEffect(() => {
+    const loadDestinations = async () => {
+      try {
+        const res = await getDestinations();
+        console.log("API Response:", res.data);
+        setDestinations(res.data);
+      } catch (err) {
+        console.error("Failed to load destinations", err);
+      }
+    };
     loadDestinations();
   }, []);
 
-  const loadDestinations = async () => {
-    const res = await getDestinations();
-    setDestinations(res.data);
-  };
-
-  const handleDelete = async (id) => {
-    await deleteDestination(id);
-    loadDestinations();
-  };
-
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold mb-4">Destinations</h2>
-      <ul className="space-y-2">
-        {destinations.map(dest => (
-          <li key={dest._id} className="flex justify-between p-2 bg-gray-100 rounded">
-            <span>{dest.name} — {dest.district}</span>
-            <button
-              className="bg-red-500 text-white px-2 py-1 rounded"
-              onClick={() => handleDelete(dest._id)}
-            >
-              Delete
-            </button>
-          </li>
-        ))}
-      </ul>
+    <div className="destination-page">
+      <h2 className="destination-title">Destinations</h2>
+
+      {destinations.length === 0 ? (
+        <p className="no-destinations">No destinations found</p>
+      ) : (
+        <div className="destination-grid">
+          {destinations.map(dest => (
+            <div key={dest._id} className="destination-card">
+              <h3 className="destination-name">{dest.name}</h3>
+              <p className="destination-description">{dest.description}</p>
+              <p className="destination-location">
+                {dest.district}, {dest.province}
+              </p>
+              <p className="destination-meta">
+                <strong>Best Time:</strong> {dest.bestTimeToVisit}
+              </p>
+              <p className="destination-meta">
+                <strong>Activities:</strong> {dest.activities?.join(', ') || 'N/A'}
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
