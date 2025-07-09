@@ -5,6 +5,7 @@ import cors from 'cors';
 import destinationRoutes from './routes/destinationRoutes.js';
 import hotelRoutes from './routes/hotelRoutes.js';
 import packageRoutes from './routes/packagesRoutes.js';
+import authRoutes from './routes/authRoutes.js';
 
 // Load environment variables from .env file
 dotenv.config();
@@ -28,6 +29,8 @@ app.get('/', (req, res) => {
 app.use('/api/destinations', destinationRoutes);
 app.use('/api/hotels', hotelRoutes);
 app.use('/api/packages', packageRoutes);
+app.use('/api/auth', authRoutes);
+
 
 // Start the server
 const PORT = process.env.PORT || 5000;
