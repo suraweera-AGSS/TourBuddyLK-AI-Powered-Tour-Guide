@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { getDestinations } from '../../api/destinationApi';
 import './DestinationList.css';
 
@@ -20,7 +21,11 @@ export default function DestinationList() {
 
   return (
     <div className="destination-page">
-      <h2 className="destination-title">Destinations</h2>
+      <div className="destination-header">
+        <h2 className="destination-title">Destinations</h2>
+
+        
+      </div>
 
       {destinations.length === 0 ? (
         <p className="no-destinations">No destinations found</p>
@@ -28,7 +33,6 @@ export default function DestinationList() {
         <div className="destination-grid">
           {destinations.map(dest => (
             <div key={dest._id} className="destination-card">
-              
               {/* Image */}
               <img
                 src={

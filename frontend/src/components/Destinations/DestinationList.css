@@ -80,3 +80,23 @@
   border-radius: 4px;
   margin-bottom: 0.75rem;
 }
+.destination-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.add-destination-button {
+  background-color: #3b82f6;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.add-destination-button:hover {
+  background-color: #1d4ed8;
+}
