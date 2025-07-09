@@ -22,7 +22,7 @@ export default function DestinationList() {
   return (
     <div className="destination-page">
       <div className="destination-header">
-        <h2 className="destination-title">Destinations</h2>
+        <h2 className="destination-title">Destinations - USER</h2>
 
         
       </div>
